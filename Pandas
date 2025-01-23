@@ -1,0 +1,27 @@
+import pandas as pd
+
+data = {
+    "Name": ["Abis", "shariq", "huzaifa"],
+    "Age": [25,30,35],
+    "City": ["khi", "lhr","isb"]
+}
+
+df = pd.DataFrame(data)
+
+feltered = df[df["Age"] > 28]
+
+df["Salaries"] = [50000, 40000, 70000]
+
+df["Age"] += 1
+
+df["increment"] = [5000, 6000, 3000]
+
+df["Salaries"] += 1000
+
+groped = df.groupby("City")["Age"].mean()
+
+sorted_df = df.sort_values("Age", ascending=False)
+
+df["Province"] = [None, "Punjab", "Sindh"]
+
+print(df.isna())
